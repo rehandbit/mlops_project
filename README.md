@@ -1,7 +1,9 @@
 # mlops_project
+-----
 
 ## End to End Machine Learning Project Implementation
 
+-----
 
 #### Agenda
 -----
@@ -9,13 +11,13 @@
 
 Day - 1
 -----
-1- Setup the github {repo}<br>
+1 - Setup the github {repo}<br>
 
     a> new environment<br>
     b> setup.py mostly version <br>
     c> requirements.txt 
 
-2- SRC folder and build the package
+2 - SRC folder and build the package
 
 -----
 Day - 2
