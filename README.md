@@ -9,10 +9,9 @@
 
 Day - 1
 -----
-1- Setup the github {repo}
+1- Setup the github {repo}<br>
 
-    a> new environment
-
+    a> new environment<br>
     b> setup.py mostly version <br>
     c> requirements.txt 
 
@@ -21,15 +20,11 @@ Day - 1
 -----
 Day - 2
 ------
-1 - Project Structure Component
-
-2 - Pipeline
-
-3 - Project Exception Handling Code
-
-4 - Project Logging Module Implementation
-
-5 - Testing Logging.py & Exception.py
+1 - Project Structure Component<br>
+2 - Pipeline<br>
+3 - Project Exception Handling Code<br>
+4 - Project Logging Module Implementation<br>
+5 - Testing Logging.py & Exception.py<br>
 
 
 > create a file for catching error from scratch to know how ml project are design and internal design or architecture
