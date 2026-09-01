@@ -1,4 +1,6 @@
 .DS_Store
+artifacts/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -150,6 +152,7 @@ activemq-data/
 *.sage.py
 
 # Environments
+
 .env
 .envrc
 .venv

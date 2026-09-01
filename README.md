@@ -30,3 +30,7 @@ Day - 2
 
 
 > create a file for catching error from scratch to know how ml project are design and internal design or architecture
+
+
+
+Data Ingestion
