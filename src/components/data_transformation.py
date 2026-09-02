@@ -41,8 +41,8 @@ class DataTransformation:
                 ]
             )
             logging.info('Numerical column standard scaling completed')
-            # logging.info(f'Categorical column', categorical_columns)
-            # logging.info(f'Numerical column', numerical_columns)
+            logging.info('Categorical column: %s', categorical_columns)
+            logging.info('Numerical column: %s', numerical_columns)
 
 
             cat_pipeline = Pipeline(
@@ -86,7 +86,7 @@ class DataTransformation:
             target_feature_test_df = test_df[target_column_name]
 
 
-            logging.info(f'Applying preprocessing object on training dataframe and testing dataframe')
+            logging.info('Applying preprocessing object on training dataframe and testing dataframe')
 
             input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df)
             input_feature_test_arr = preprocessing_obj.transform(input_feature_test_df)
