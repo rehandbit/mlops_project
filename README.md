@@ -36,3 +36,5 @@ Day - 2
 Data Ingestion
 
 Data Transformation
+
+Data Training and Testing 
