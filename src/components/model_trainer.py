@@ -41,11 +41,50 @@ class ModelTrainer:
                 "Gradient Boosting" : GradientBoostingRegressor(),
                 "Linear Regression" : LinearRegression(),
                 "K-Neighbor" : KNeighborsRegressor(),
-                "XGBClassifier" : XGBRegressor(),
-                "CatBoosting Classifier" : CatBoostRegressor(verbose = False),
-                "AdaBoost Classifier" : AdaBoostRegressor()
+                "XGBRegressor" : XGBRegressor(),
+                "CatBoosting Regressor" : CatBoostRegressor(verbose = False),
+                "AdaBoost Regressor" : AdaBoostRegressor()
             }
-            model_report:dict = evaluate_models(x_train = x_train, y_train = y_train, x_test = x_test, y_test = y_test, models = models)
+
+            params = {
+                "Decision Tree" : {
+                    'criterion' : ['squared_error', 'absolute_error', 'poisson']
+                },
+                "Random Forest" : {
+                    'n_estimators' :[8,16,32,64,128,256]
+                },
+                "Gradient Boosting" : {
+                    "learning_rate" : [.1, .01 , .05 , .001],
+                    "subsample" : [0.6, 0.7, 0.75, 0.8, 0.85, 0.9],
+                    "n_estimators": [8,16,32,64,128,256]
+                },
+                "Linear Regression" :{},
+                "K-Neighbor": {
+                    "n_neighbors": [5,7,9,11]
+                },
+                "XGBRegressor" : {
+                    "learning_rate" : [.1, .01 , .05 , .001],
+                    "n_estimators": [8,16,32,64,128,256]
+
+                },
+                "CatBoosting Regressor" :{
+                    "depth" :[6,8,10],
+                    "learning_rate" : [.1, .01 , .05 , .001],
+                    "iterations":[30,50,100]
+                },
+                "AdaBoost Regressor": {
+                    "learning_rate" : [.1, .01 , .05 , .001],
+                    "n_estimators": [8,16,32,64,128,256]
+
+                }
+            }
+
+
+
+
+
+
+            model_report:dict = evaluate_models(x_train = x_train, y_train = y_train, x_test = x_test, y_test = y_test, models = models, param = params)
 
             best_model_score = max(sorted(model_report.values()))
 
